@@ -9,10 +9,10 @@ creator:
     url: http://www.gutenberg.org/2009/agents/35
     wikipedia: http://en.wikipedia.org/wiki/Robert_Louis_Stevenson
 gutenberg_bookshelf:
-- Horror
-- Movie Books
-- Precursors of Science Fiction
 - Gothic Fiction
+- Horror
+- Precursors of Science Fiction
+- Movie Books
 gutenberg_issued: '1992-10-01'
 gutenberg_type: Text
 identifiers:
@@ -22,13 +22,13 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Multiple personality -- Fiction'
-- '!lcsh:Physicians -- Fiction'
-- '!lcsh:Psychological fiction'
-- '!lcsh:Science fiction'
-- '!lcsh:Horror tales'
-- '!lcc:PR'
 - '!lcsh:London (England) -- Fiction'
+- '!lcsh:Psychological fiction'
 - '!lcsh:Self-experimentation in medicine -- Fiction'
+- '!lcsh:Multiple personality -- Fiction'
+- '!lcc:PR'
+- '!lcsh:Physicians -- Fiction'
+- '!lcsh:Horror tales'
+- '!lcsh:Science fiction'
 title: The Strange Case of Dr. Jekyll and Mr. Hyde
 url: http://www.gutenberg.org/ebooks/42
