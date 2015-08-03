@@ -17,8 +17,8 @@ creator:
 gutenberg_bookshelf:
 - Gothic Fiction
 - Horror
-- Precursors of Science Fiction
 - Movie Books
+- Precursors of Science Fiction
 gutenberg_issued: '1992-10-01'
 gutenberg_type: Text
 identifiers:
@@ -28,13 +28,13 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:London (England) -- Fiction'
-- '!lcsh:Psychological fiction'
-- '!lcsh:Self-experimentation in medicine -- Fiction'
-- '!lcsh:Multiple personality -- Fiction'
-- '!lcc:PR'
-- '!lcsh:Physicians -- Fiction'
-- '!lcsh:Horror tales'
-- '!lcsh:Science fiction'
+- '!lcsh: Horror tales'
+- '!lcsh: London (England) -- Fiction'
+- '!lcsh: Science fiction'
+- '!lcc: PR'
+- '!lcsh: Psychological fiction'
+- '!lcsh: Multiple personality -- Fiction'
+- '!lcsh: Self-experimentation in medicine -- Fiction'
+- '!lcsh: Physicians -- Fiction'
 title: The Strange Case of Dr. Jekyll and Mr. Hyde
 url: http://www.gutenberg.org/ebooks/42
