@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.epub
+- ebook-convert The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.epub The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.mobi
+- xvfb-run ebook-convert The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.epub The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: GYynlz4DcfDj7iA5EC06SA8c8ki9sdBAHNx1x1EdyOTUVRa9ikrtCrXfv0/n+mfCfDnFrd+jePFtqZluQ3S84n81sKhvypn/ljsOu+wk8LQYaC7xnClbm6fbkuL0jyBDi8a0kKhlTSR+wLinXIMgOZsAVrokqOFpA5aThDhSJoqlr8wcLigZLt7EFaX25s7eMnJPLbOapRgSEPCOVcfKvPx055SB212skFFdOl3ZzJH2cQwXuoVP8mvlm3zJWtf/gIUMFSzsWqWMX7qRCdTKPmjOTXQIomDqn6L+9bStcymM7UYoycDG4pxKg125TyzS+9mVcvDUB+/EYN4jT+rRSaJN089JadUwO9IvEGqGeU7wJJxVPTyOHNoTL1iZb7vqN2LWE/tpFzfS+N89e+aqOjDQUyDP2iem1Gn+nsrO9ulB6825uJZ1Tq9wz0/KtPqrwySE8otAhoMlFIqZVhNt5qA6FpNwYPjg+ZPDOw357uX/+1lGIwEP606qYx6H95raldB/gBwzan47Phj0nRgMrslmf0Bw0aazIOfcBhBkp3Exp+EMb8rdfVBuaYCTkZyxtZU5Av1qsu5ckfBYLBqiUs6H0V/H2NcM6PKcbDMbhe9xER1Rnk6C9N18zzwm7CsGCxOwAMvDH3oGWvv2I/EIVtmzRrsTkDuTAhbqhJomUcM=
-  file: The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.epub
+  file:
+    - The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.epub
+    - The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.mobi
+    - The-Strange-Case-of-Dr-Jekyll-and-Mr-Hyde.pdf
   "on":
     repo: GITenberg/The-Strange-Case-of-Dr.-Jekyll-and-Mr.-Hyde_42
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
