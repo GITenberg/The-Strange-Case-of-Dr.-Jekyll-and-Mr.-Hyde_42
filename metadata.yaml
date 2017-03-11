@@ -1,5 +1,5 @@
 _repo: The-Strange-Case-of-Dr.-Jekyll-and-Mr.-Hyde_42
-_version: 0.2.1
+_version: 0.2.2
 covers:
 - attribution: mafMOVE, 2015
   cover_type: original
@@ -15,6 +15,8 @@ creator:
     gutenberg_agent_id: '35'
     url: http://www.gutenberg.org/2009/agents/35
     wikipedia: http://en.wikipedia.org/wiki/Robert_Louis_Stevenson
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/42#The-Strange-Case-of-Dr.-Jekyll-and-Mr.-Hyde
 gutenberg_bookshelf:
 - Gothic Fiction
 - Horror
